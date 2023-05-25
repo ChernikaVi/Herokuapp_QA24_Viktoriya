@@ -28,6 +28,7 @@ public class frames {
 
     @Test
     public void framesTest() {
+        driver.switchTo().frame("mce_0_ifr");
         WebElement frame = driver.findElement(By.id("tinymce"));
         String frameText = frame.getText();
         Assert.assertEquals(frameText, "Your content goes here.");
